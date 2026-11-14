@@ -22,7 +22,9 @@
     system: `<path d="M2.5 2A1.5 1.5 0 0 0 1 3.5v6A1.5 1.5 0 0 0 2.5 11H7v1.5H4.5V14h7v-1.5H9V11h4.5A1.5 1.5 0 0 0 15 9.5v-6A1.5 1.5 0 0 0 13.5 2h-11zm0 1.5h11v6h-11v-6z"/>`,
     check: `<path d="M13.985 2.383 5.127 12.754 1.388 8.375l-.658.77 4.397 5.149 9.618-11.262z"/>`,
   };
-  const svg = (name, size = 16) => `<svg width="${size}" height="${size}" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">${ICONS[name]}</svg>`;
+  // Los iconos de Spotify llenan todo su cuadro de 16 px: cada dibujo se encuadra para ocupar lo mismo
+  const FRAME = { headphones: "1.5 1.5 13 13", speakers: "1.5 1.5 13 13", display: "1 1 14 14", system: "1 1 14 14", check: "0 0 16 16" };
+  const svg = (name, size = 16) => `<svg width="${size}" height="${size}" viewBox="${FRAME[name]}" fill="currentColor" aria-hidden="true">${ICONS[name]}</svg>`;
   const kindOf = (device) => {
     if (!device) return "system";
     if (/headphone|headset|earphone/i.test(device.terminalType) || /bluetooth/i.test(device.transportType)) return "headphones";
