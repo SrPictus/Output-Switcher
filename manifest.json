@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Output Switcher",
+    "description": "Switch Spotify between your speakers, headphones and monitor from a button in the player bar, without opening Settings.",
+    "preview": "preview.png",
+    "main": "output-switcher.js",
+    "readme": "README.md",
+    "authors": [{ "name": "SrPictus", "url": "https://github.com/SrPictus" }],
+    "tags": ["audio", "output", "device", "headphones", "playbar"]
+  }
+]
