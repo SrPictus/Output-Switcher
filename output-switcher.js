@@ -34,6 +34,10 @@
 
   const style = document.createElement("style");
   style.textContent = `
+    /* Spicetify deja el icono en línea con el texto y queda 2 px más arriba que los de Spotify: se centra igual que ellos */
+    button[aria-label^="Audio output"] { display: inline-flex !important; align-items: center; justify-content: center; }
+    button[aria-label^="Audio output"] > span { display: flex !important; }
+    button[aria-label^="Audio output"] svg { display: block; }
     .os-menu {
       position: fixed;
       z-index: 9999;
